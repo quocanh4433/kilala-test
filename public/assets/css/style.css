@@ -92,6 +92,29 @@ input, textarea {
   box-sizing: border-box;
 }
 
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+  list-style-type: none;
+}
+.slick-dots li {
+  margin: 0 8px;
+}
+.slick-dots button {
+  display: block;
+  width: 15px !important;
+  height: 15px !important;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background-color: #8B8D8F !important;
+  text-indent: -9999px;
+}
+.slick-dots li.slick-active button {
+  background-color: #FFF !important;
+}
+
 /*≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 // Layout
 ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡*/
@@ -134,6 +157,7 @@ input, textarea {
   letter-spacing: 0.7px;
   padding: 2.5rem 0px 3.5rem 0px;
   width: 20.07rem;
+  border-left: 1px solid #F4F4F4;
 }
 @media only screen and (max-width: 1280px) {
   .header--pc .nav nav a {
@@ -166,7 +190,6 @@ input, textarea {
   height: 4px;
 }
 .header--mobile {
-  background-color: aqua;
   height: 8rem;
   display: none;
   position: relative;
@@ -208,24 +231,8 @@ input, textarea {
 .header--mobile .hamburger--active .hamburger__line-3 {
   transform: translateY(-11px) rotate(-225deg);
 }
-
-.overlay {
-  opacity: 0;
-}
-
-.overlay--active {
-  opacity: 1;
-  transition: linear 0.4s;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 10;
-  transition: linear 0.4s;
+.header--mobile .logo img {
+  width: 80%;
 }
 
 .nav--mobile {
@@ -235,7 +242,7 @@ input, textarea {
   right: 0;
   width: 60%;
   height: 100vh;
-  background-color: #fff;
+  background-color: #FFF;
   transition: linear 0.3s;
   transform: translateX(100%);
 }
@@ -282,6 +289,25 @@ input, textarea {
   transition: linear 0.3s;
 }
 
+.overlay {
+  opacity: 0;
+}
+
+.overlay--active {
+  opacity: 1;
+  transition: linear 0.4s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  transition: linear 0.4s;
+}
+
 /*------------------------------------------------------------
 footer
 ------------------------------------------------------------*/
@@ -291,7 +317,6 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
   line-height: 1.5;
-  max-width: 192rem;
 }
 
 .container {
@@ -306,6 +331,17 @@ body {
 /*------------------------------------------------------------
 Button
 ------------------------------------------------------------*/
+.btn-primary {
+  padding: 14px 26px;
+  text-transform: uppercase;
+  border: 2px solid #FFF;
+  background-color: transparent;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
 /*------------------------------------------------------------
 title
 ------------------------------------------------------------*/
@@ -339,5 +375,57 @@ video
 /*------------------------------------------------------------
 video
 ------------------------------------------------------------*/
+/*≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+// Page
+≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡*/
+/* About
+------------------------------------------------------------*/
+.banner__slider-item {
+  background-size: cover;
+  background-position: center;
+  height: 99rem;
+  position: relative;
+}
+.banner__slider-item .content {
+  position: absolute;
+  top: 54.6%;
+  left: 49.7%;
+  transform: translateX(-49.3%) translateY(-50%);
+  width: 90%;
+  text-align: center;
+  font-family: "Helvetica";
+}
+.banner__slider-item .content-1 {
+  text-transform: uppercase;
+  font-size: 10rem;
+  color: #FFF;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.5rem;
+}
+@media only screen and (max-width: 767px) {
+  .banner__slider-item .content-1 {
+    font-size: 6rem;
+  }
+}
+.banner__slider-item .content-2 {
+  font-size: 2.2rem;
+  letter-spacing: 7px;
+  color: #FFF;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .banner__slider-item .content-2 {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+  }
+}
+.banner__slider-item .content .button {
+  text-align: center;
+  margin-top: 41px;
+  margin-right: 10px;
+}
 
 /*# sourceMappingURL=style.css.map */

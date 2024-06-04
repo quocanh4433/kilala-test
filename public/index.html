@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kilala</title>
-    <link rel="stylesheet" href="./style/reset.css">
-    <link rel="stylesheet" href="./style/style.css">
+    <!-- Logo -->
+    <link rel="shortcut icon" href="./assets/images/Logo.png" type="image/x-icon">
+
+    <!-- Font Open Sans  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="header--pc">
+            <a href="#" class="logo">
+                <img src="./assets/images/Logo.png" alt="Favicon">
+            </a>
+            <div class="nav">
+                <nav>
+                    <a href="#">home</a>
+                    <a href="#">about us</a>
+                    <a href="#">feature work</a>
+                    <a href="#">reference</a>
+                    <a href="#">blog</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header--mobile">
+            <a href="#" class="logo">
+                <img src="./assets/images/Logo.png" alt="Favicon">
+            </a>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span class="hamburger__line hamburger__line-1"></span>
+                <span class="hamburger__line hamburger__line-2"></span>
+                <span class="hamburger__line hamburger__line-3"></span>
+            </button>
+        </div>
+
+        <div class="nav--mobile">
+            <nav>
+                <a href="#">home</a>
+                <a href="#">about us</a>
+                <a href="#">feature work</a>
+                <a href="#">reference</a>
+                <a href="#">blog</a>
+            </nav>
+        </div>
+
+        <div class="overlay"></div>
+    </header>
+    <script src="./assets/js/main.js"></script>
 </body>
+
 </html>

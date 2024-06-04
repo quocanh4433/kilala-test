@@ -1,0 +1,343 @@
+@charset "UTF-8";
+/*------------------------------------------------------------
+	Reset
+------------------------------------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+nav, section,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+body, table,
+input, textarea, select, option,
+h1, h2, h3, h4, h5, h6 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+table,
+input, textarea, select, option {
+  line-height: 1.1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+img {
+  vertical-align: top;
+}
+
+a,
+a img {
+  transition: 0.3s ease-in-out;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+input, textarea {
+  box-sizing: border-box;
+}
+
+/*≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+// Layout
+≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡*/
+/* Header
+------------------------------------------------------------*/
+.header--pc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 767px) {
+  .header--pc {
+    display: none;
+  }
+}
+.header--pc .logo {
+  padding: 1.6rem 2.2rem;
+}
+@media only screen and (max-width: 1024px) {
+  .header--pc .logo {
+    width: 18%;
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .header--pc .logo img {
+    width: 100%;
+  }
+}
+.header--pc .nav nav {
+  display: flex;
+}
+.header--pc .nav nav a {
+  display: inline-block;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.7px;
+  padding: 2.5rem 0px 3.5rem 0px;
+  width: 20.07rem;
+}
+@media only screen and (max-width: 1280px) {
+  .header--pc .nav nav a {
+    width: 14rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .header--pc .nav nav a {
+    font-size: 1.3rem;
+    width: fit-content;
+    padding: 2rem;
+  }
+}
+.header--pc .nav nav a::after {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  background-color: #D60151;
+  transition: all 0.3s;
+}
+.header--pc .nav nav a:hover {
+  color: #D60151;
+}
+.header--pc .nav nav a:hover::after {
+  width: 100%;
+  height: 4px;
+}
+.header--mobile {
+  background-color: aqua;
+  height: 8rem;
+  display: none;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .header--mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+}
+.header--mobile .hamburger {
+  z-index: 12;
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.header--mobile .hamburger .hamburger__line {
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #D60151;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease-out;
+}
+.header--mobile .hamburger .hamburger__line:not(:first-child) {
+  margin-top: 7px;
+}
+.header--mobile .hamburger--active .hamburger__line-1 {
+  transform: translateY(11px) rotate(-135deg);
+}
+.header--mobile .hamburger--active .hamburger__line-2 {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.header--mobile .hamburger--active .hamburger__line-3 {
+  transform: translateY(-11px) rotate(-225deg);
+}
+
+.overlay {
+  opacity: 0;
+}
+
+.overlay--active {
+  opacity: 1;
+  transition: linear 0.4s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  transition: linear 0.4s;
+}
+
+.nav--mobile {
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100vh;
+  background-color: #fff;
+  transition: linear 0.3s;
+  transform: translateX(100%);
+}
+@media only screen and (max-width: 575px) {
+  .nav--mobile {
+    width: 100%;
+  }
+}
+.nav--mobile nav {
+  margin-top: 12rem;
+}
+.nav--mobile nav a {
+  display: block;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.7px;
+  padding: 2.5rem 0px 3.5rem 0px;
+  margin-bottom: 1.5rem;
+}
+.nav--mobile nav a::after {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  background-color: #D60151;
+  transition: all 0.3s;
+}
+.nav--mobile nav a:hover {
+  color: #D60151;
+}
+.nav--mobile nav a:hover::after {
+  width: 50%;
+  height: 4px;
+}
+
+.nav--active {
+  transform: translateX(0%);
+  transition: linear 0.3s;
+}
+
+/*------------------------------------------------------------
+footer
+------------------------------------------------------------*/
+/* layout
+------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  max-width: 192rem;
+}
+
+.container {
+  max-width: 128rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/*≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+// Component
+≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡*/
+/*------------------------------------------------------------
+Button
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+title
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+icon
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+form
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+text
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+navi
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+img
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+list
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+table
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+line
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+video
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+video
+------------------------------------------------------------*/
+
+/*# sourceMappingURL=style.css.map */

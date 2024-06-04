@@ -63,6 +63,8 @@
 /* About
 ------------------------------------------------------------*/
 .about {
+    margin-bottom: 6rem;
+
     &__title {
         margin: 7.4rem 0 2.7rem 2.5rem;
     }
@@ -88,8 +90,8 @@
         margin: 0 auto 10rem auto;
 
         @include breakpoint(767) {
-        margin: 0 auto 5rem auto;
-            
+            margin: 0 auto 5rem auto;
+
         }
 
         .tab {
@@ -153,6 +155,7 @@
                         transition: all 0.3s;
                     }
                 }
+
                 .text {
                     h4 {
                         color: $color-primary;
@@ -230,6 +233,150 @@
                     letter-spacing: -0.5px;
                 }
             }
+        }
+    }
+}
+
+/* Feature
+------------------------------------------------------------*/
+.feature {
+    &__background {
+        background-size: cover;
+        background-position: center;
+        padding: 17.4rem 10rem 15.6rem 18.7rem;
+
+        @include breakpoint(1024) {
+            padding: 10rem;
+        }
+
+        @include breakpoint(767) {
+            padding: 4rem;
+        }
+    }
+
+    &__info {
+
+        color: $color-white;
+
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint(1024) {
+            display: block;
+        }
+
+        &-img {
+            width: 49%;
+
+            @include breakpoint(1024) {
+                width: 100%;
+            }
+        }
+
+        &-content {
+            width: 45.6%;
+
+            @include breakpoint(1024) {
+                width: 100%;
+            }
+
+            p {
+                width: 78%;
+                @include breakpoint(1024) {
+                    width: 100%;
+                }
+            }
+
+            .content-1 {
+                text-transform: uppercase;
+                font-size: 1.6rem;
+                letter-spacing: 2.5px;
+                color: #999;
+                font-weight: 700;
+                margin-top: 3.5rem;
+
+            }
+
+            .content-2 {
+                margin-top: 0.7rem;
+                font-size: 4rem;
+                font-weight: 700;
+                letter-spacing: -2px;
+            }
+
+            .content-3 {
+                font-size: 2rem;
+                margin-top: 2.3rem;
+                font-family: "Helvetica";
+                line-height: 1.6;
+                // width: 78%;
+            }
+
+            ;
+
+            .content-4 {
+                font-family: "Helvetica";
+                font-size: 1.6rem;
+                margin-top: 46px;
+                // width: 76%;
+            }
+
+            .content-5,
+            .content-6 {
+                margin-top: 5rem;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                >img {
+                    margin-right: 3rem;
+                }
+
+                >div {
+                    h5 {
+                        line-height: 0.8;
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                        margin-bottom: 1.4rem;
+                    }
+
+                    p {
+                        font-family: "Helvetica";
+                        font-size: 1.6rem;
+                        // width: 78%;
+                    }
+                }
+
+
+            }
+
+            .content-6 {
+                margin-top: 5.8rem;
+            }
+        }
+
+    }
+
+    &__bottom {
+        padding: 5rem 0 4.7rem 16rem;
+        background-color: $color-primary;
+        color: $color-white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        img {
+            margin-right: 20px;
+        }
+
+        p {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 2.4rem;
+            letter-spacing: 2.5px;
         }
     }
 }

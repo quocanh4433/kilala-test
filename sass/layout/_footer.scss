@@ -1,3 +1,81 @@
 /*------------------------------------------------------------
 footer
 ------------------------------------------------------------*/
+.footer {
+  background-color: #edecea;
+  padding: 42px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    .footer__1 {
+      width: 74%;
+      padding: 0 24px;
+
+      &-list {
+        display: flex;
+        justify-content: space-between;
+
+        .comunication,
+        .related {
+          h5 {
+            margin-top: 16px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-left: 5px;
+            text-transform: uppercase;
+          }
+
+          ul {
+            li {
+              font-size: 1.5rem;
+              line-height: 1.6;
+            }
+          }
+        }
+
+        .comunication {
+          width: 65%;
+          h5 {
+            margin-bottom: 15px;
+
+          }
+          ul {
+            width: 73%;
+            li {
+            margin-bottom: 24px;
+
+            }
+          }
+        }
+
+        .related {
+          width: 41.5%;
+          h5 {
+            margin-bottom: 9px;
+          }
+
+          ul {
+            margin-left: 6px;
+            li {
+              margin-bottom: 6px;
+            }
+          }
+        }
+      }
+    }
+    .footer__form {
+      width: 26%;
+      padding: 0px 18px 0 27px;
+      margin-top: -3px;
+
+      h5 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        padding: 20px 10px 10px 10px;
+      }
+    }
+  }
+}

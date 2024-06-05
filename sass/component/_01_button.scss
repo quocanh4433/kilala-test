@@ -2,25 +2,36 @@
 Button
 ------------------------------------------------------------*/
 .btn-primary {
-    padding: 14px 26px;
-    text-transform: uppercase;
-    border: 2px solid $color-white;
-    background-color: transparent;
-    color: $color-white;
+    padding: 1.4rem 2.6rem;
+
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1.6rem;
     letter-spacing: 1px;
+    text-transform: uppercase;
+
+    border: 0.2rem solid $color-white;
+    color: $color-white;
+
+    background-color: transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        border-color: $color-primary;
+        background-color: $color-primary;
+    }
 }
 
-
 .btn-primary--solid {
-    padding: 15px 35px 15px 35px;
-    text-transform: uppercase;
-    border: 1px solid #FFF;
-    background-color: transparent;
-    color: #000;
-    background-color: #FFF;
+    padding: 1.5rem 3.5rem 1.5rem 3.5rem;
+
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1.6rem;
     letter-spacing: 1px;
+    text-transform: uppercase;
+
+    border: 1px solid $color-white;
+
+    color: $color-black;
+    background-color: $color-white;
 }

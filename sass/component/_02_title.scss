@@ -3,32 +3,45 @@ title
 ------------------------------------------------------------*/
 
 .title {
-
     h2 {
-        font-size: 5rem;
-        text-align: center;
-        line-height: 1.5em;
-        text-transform: uppercase;
-        color: $color-black;
-
         display: flex;
         justify-content: center;
         align-items: center;
 
+        font-size: 5rem;
+        text-align: center;
+        line-height: 1.5em;
+        text-transform: uppercase;
+
+        color: $color-black;
+
+        @include breakpoint(575) {
+            font-size: 3.5rem;
+        }
+
+        @include breakpoint(375) {
+            font-size: 2.5rem;
+            text-wrap: wrap;
+        }
+
         &::before {
+            content: "";
+
             width: 6rem;
             height: 0.2rem;
-            background-color: $color-black;
             margin-right: 5rem;
-            content: "";
+
+            background-color: $color-black;
         }
 
         &::after {
+            content: "";
+
             width: 6rem;
             height: 0.2rem;
-            background-color: $color-black;
             margin-left: 5rem;
-            content: "";
+            
+            background-color: $color-black;
         }
     }
 }

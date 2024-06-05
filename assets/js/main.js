@@ -8,8 +8,6 @@ function toggleMenu() {
 }
 
 
-
-
 const tabs = document.querySelectorAll('.tab');
 const contents = document.querySelectorAll('.content');
 const underline = document.querySelector('.underline');
@@ -38,3 +36,4 @@ tabs.forEach(tab => {
 
 window.addEventListener('resize', updateUnderline);
 updateUnderline();
+

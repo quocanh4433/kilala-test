@@ -2,15 +2,16 @@
 footer
 ------------------------------------------------------------*/
 .footer {
-  background-color: #edecea;
-  padding: 42px 0;
+  padding: 4.2rem 0;
+  background-color: $color-footer;
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
     .footer__1 {
       width: 74%;
-      padding: 0 24px;
+      padding: 0 2.4rem;
 
       &-list {
         display: flex;
@@ -19,10 +20,12 @@ footer
         .comunication,
         .related {
           h5 {
-            margin-top: 16px;
             font-size: 1.8rem;
             font-weight: 700;
-            margin-left: 5px;
+
+            margin-top: 1.6rem;
+            margin-left: 0.5rem;
+
             text-transform: uppercase;
           }
 
@@ -36,27 +39,30 @@ footer
 
         .comunication {
           width: 65%;
-          h5 {
-            margin-bottom: 15px;
 
+          h5 {
+            margin-bottom: 1.5rem;
           }
+
           ul {
             width: 73%;
-            li {
-            margin-bottom: 24px;
 
+            li {
+              margin-bottom: 2.4rem;
             }
           }
         }
 
         .related {
           width: 41.5%;
+
           h5 {
             margin-bottom: 9px;
           }
 
           ul {
             margin-left: 6px;
+
             li {
               margin-bottom: 6px;
             }
@@ -64,17 +70,18 @@ footer
         }
       }
     }
+
     .footer__form {
       width: 26%;
-      padding: 0px 18px 0 27px;
-      margin-top: -3px;
+      margin-top: -0.3rem;
+      padding: 0px 1.8rem 0 2.7rem;
 
       h5 {
         font-size: 1.8rem;
         font-weight: 700;
         text-transform: uppercase;
 
-        padding: 20px 10px 10px 10px;
+        padding: 2rem 1rem 1rem 1rem;
       }
     }
   }
